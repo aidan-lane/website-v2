@@ -1,10 +1,7 @@
 const express = require('express');
-const mongodb = require('mongodb');
-
 const router = express.Router();
 
-router.get('/', (req, res) => {
-	res.send('hello');
-});
+router.use('/files', require('./api/files'));
+router.use('/blog', require('./api/blogposts'));
 
 module.exports = router;
