@@ -1,23 +1,24 @@
 <template>
-  <div>
-    hi
+  <div id="resume">
+    <img alt="Resume Image" src="../assets/resume.jpg">
   </div>
 </template>
 
 <script>
 export default {
-  mounted() {
-    this.$http.get('/files/pdf')
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+  data() {
+    return {
+
+    }
   }
 }
 </script>
 
 <style scoped>
-
+  #resume {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 </style>
