@@ -1,5 +1,11 @@
-const express = require('express');
-const mongodb = require('mongodb');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
+var conn = require('../db')
 
-module.exports = router;
+router.get('/', (req, res) => {
+  conn.getDb().collection('blog_posts').find({}).toArray().then((data) => {
+    res.send(data)
+  })
+})
+
+module.exports = router

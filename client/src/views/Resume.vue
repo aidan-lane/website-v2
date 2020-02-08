@@ -1,16 +1,14 @@
 <template>
   <div id="resume">
-    <img alt="Resume Image" src="../assets/resume.jpg">
+    <a href="Resume2020.pdf" download>
+      <img alt="Resume Image" src="../assets/resume.jpg" title="download pdf">
+    </a>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-
-    }
-  }
+  
 }
 </script>
 

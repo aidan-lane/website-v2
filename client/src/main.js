@@ -1,6 +1,6 @@
-import Vue from 'vue';
-import App from './App.vue';
-import router from './router';
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
 
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
@@ -10,21 +10,24 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-// add font awesome to global
-library.add(fas, fab);
-Vue.component('font-awesome-icon', FontAwesomeIcon);
-dom.watch();
+import {SquareSpinner} from 'vue-spinners'
 
-Vue.use(Buefy);
+// add font awesome to global
+library.add(fas, fab)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('square', SquareSpinner)
+dom.watch()
+
+Vue.use(Buefy)
 
 // use http to make back requests
-const axios = require('axios').default;
-axios.defaults.baseURL = '/api';
-Vue.prototype.$http = axios;
+const axios = require('axios').default
+axios.defaults.baseURL = '/api'
+Vue.prototype.$http = axios
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 
 new Vue({
   router,
   render: h => h(App),
-}).$mount('#app');
+}).$mount('#app')
