@@ -11,6 +11,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import {SquareSpinner} from 'vue-spinners'
+import VueMarkdown from 'vue-markdown-v2'
 
 // add font awesome to global
 library.add(fas, fab)
@@ -18,7 +19,9 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('square', SquareSpinner)
 dom.watch()
 
-Vue.use(Buefy)
+Vue.use(Buefy, {defaultIconPack: 'fas',})
+
+Vue.component('vue-markdown', VueMarkdown)
 
 // use http to make back requests
 const axios = require('axios').default
