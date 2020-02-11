@@ -1,13 +1,10 @@
 <template>
-  <vue-markdown :source="test"/>
+  <div>
+  </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      test: '# hi'
-    }
-  }
+  
 }
 </script>
