@@ -18,9 +18,11 @@ router.get('/', (req, res) => {
  * Adds new blog post
  */
 router.put('/', (req, res) => {
-  conn.getDb().collection('blog_posts').insertOne(req.body, (err, inserted) => {
-    res.send({inserted})
-  })
+  conn.getDb().collection('blog_posts')
+    .insertOne(req.body, (err, inserted) => {
+      res.send({inserted})
+    }
+  )
 })
 
 /**
