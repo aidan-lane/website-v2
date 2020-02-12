@@ -10,8 +10,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {SquareSpinner} from 'vue-spinners'
 import VueMarkdown from 'vue-markdown-v2'
 
-// add font awesome to global
 library.add(fas, fab)
+
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('square', SquareSpinner)
 Vue.component('vue-markdown', VueMarkdown)
@@ -19,10 +19,12 @@ dom.watch()
 
 Vue.use(Buefy, {defaultIconPack: 'fas',})
 
-// use http to make back requests
+// use http as global axios request handler
 const axios = require('axios').default
 axios.defaults.baseURL = '/api'
 Vue.prototype.$http = axios
+
+Vue.prototype.darkMode = false
 
 Vue.config.productionTip = false
 

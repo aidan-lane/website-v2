@@ -14,7 +14,7 @@ app.use(cors());
 const routes = require('./routes.js')
 app.use('/api', routes)
 
-// handle production
+// handle production compilation
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(__dirname + '/public/'))
   app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'))
