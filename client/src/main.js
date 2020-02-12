@@ -7,8 +7,9 @@ import { library, dom } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import {SquareSpinner} from 'vue-spinners'
+import { SquareSpinner } from 'vue-spinners'
 import VueMarkdown from 'vue-markdown-v2'
+import { store } from './store/store'
 
 library.add(fas, fab)
 
@@ -29,6 +30,7 @@ Vue.prototype.darkMode = false
 Vue.config.productionTip = false
 
 new Vue({
+  store,
   router,
   render: h => h(App),
 }).$mount('#app')

@@ -8,7 +8,7 @@ var ObjectId = require('mongodb').ObjectID;
  */
 router.get('/', (req, res) => {
   let db = conn.getDb().collection('blog_posts')
-  db.find().sort({$natural: -1}).limit(10).toArray()
+  db.find().sort({$natural: -1}).toArray()
     .then((data) => {
       res.send(data)
   })
