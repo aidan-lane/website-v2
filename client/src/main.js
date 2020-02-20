@@ -10,6 +10,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { SquareSpinner } from 'vue-spinners'
 import VueMarkdown from 'vue-markdown-v2'
 import { store } from './store/store'
+import Transitions from 'vue2-transitions'
+import VueTypedJs from 'vue-typed-js'
 
 library.add(fas, fab)
 
@@ -18,7 +20,9 @@ Vue.component('square', SquareSpinner)
 Vue.component('vue-markdown', VueMarkdown)
 dom.watch()
 
-Vue.use(Buefy, {defaultIconPack: 'fas',})
+Vue.use(Buefy, {defaultIconPack: 'fas'})
+Vue.use(Transitions)
+Vue.use(VueTypedJs)
 
 // use http as global axios request handler
 const axios = require('axios').default

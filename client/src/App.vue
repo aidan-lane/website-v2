@@ -17,9 +17,10 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:700&display=swap');
 
 #app {
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;

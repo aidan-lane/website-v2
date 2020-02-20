@@ -47,4 +47,12 @@ export default {
   #nav {
     margin-bottom: 1em;
   }
+
+  .navbar-item:hover {
+    color: #FFB61E;
+  }
+
+  .router-link-exact-active {
+    color: #FFB61E !important;
+  }
 </style>
