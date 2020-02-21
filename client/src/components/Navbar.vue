@@ -31,6 +31,12 @@
           <b-navbar-item href="https://www.instagram.com/aidanl7/" target="_blank">
             <i class="fab fa-instagram fa-lg"></i>
           </b-navbar-item>
+          <b-navbar-item @click="toggleNightMode()">
+            <i
+              title="toggle night mode"
+              :class="[nightMode ? 'fas fa-moon fa-lg' : 'far fa-moon fa-lg']"
+            />
+          </b-navbar-item>
         </template>
       </b-navbar>
     </div>
@@ -39,13 +45,22 @@
 
 <script>
 export default {
-  
+  data () {
+    return {
+      nightMode: false
+    }
+  },
+  methods: {
+    toggleNightMode () {
+      this.nightMode = !this.nightMode
+    }
+  }
 }
 </script>
 
 <style scoped>
   #nav {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
   }
 
   .navbar-item:hover {

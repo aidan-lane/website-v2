@@ -1,7 +1,7 @@
 <template>
   <div id="resume">
-    <a href="Resume2020.pdf" download>
-      <img alt="Resume Image" src="../assets/resume.jpg" title="download pdf">
+    <a href="resume.pdf" download>
+      <img alt="Resume Image" src="../assets/resume.png" title="download pdf">
     </a>
   </div>
 </template>
