@@ -4,7 +4,7 @@
       <b-navbar 
         :fixed-top="true"
         :spaced="true"
-        :shadow="true"
+        type="is-dark"
       >
         <template slot="start">
           <b-navbar-item tag="router-link" :to="{ path: '/'}">
@@ -60,14 +60,14 @@ export default {
 
 <style scoped>
   #nav {
-    margin-bottom: 2em;
+    background-color: #273238;
   }
 
   .navbar-item:hover {
-    color: #FFB61E;
+    color: #ff9a44;
   }
 
   .router-link-exact-active {
-    color: #FFB61E !important;
+    color: #ff9a44 !important;
   }
 </style>

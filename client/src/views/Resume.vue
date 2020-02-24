@@ -14,6 +14,7 @@ export default {
 
 <style scoped>
   #resume {
+    padding-top: 3%;
     display: block;
     margin-left: auto;
     margin-right: auto;
